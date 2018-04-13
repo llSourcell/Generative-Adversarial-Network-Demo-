@@ -9,7 +9,7 @@ from foxhound import inits
 from foxhound.theano_utils import floatX, sharedX
 import theano
 import theano.tensor as T
-from scipy.stats import gaussian_kde
+from scipy import stats
 from scipy.misc import imsave, imread
 
 
@@ -125,7 +125,7 @@ def vis(i):
 
     gs = _gen(zs.reshape(-1, 1)).flatten()
     preal = _score(xs.reshape(-1, 1)).flatten()
-    kde = gaussian_kde(gs)
+    kde = stats.gaussian_kde(gs)
 
     plt.clf()
     plt.plot(xs, ps, '--', lw=2)

@@ -1,7 +1,7 @@
 import theano
 import theano.tensor as T
 import numpy as np
-from theano.compat.python2x import OrderedDict
+
 
 from theano_utils import shared0s, floatX, sharedX, l2norm
 
